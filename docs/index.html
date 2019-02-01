@@ -82,7 +82,7 @@
 <header>flex-examples</header>
 <div id="main">
     <article>
-        <iframe id="viewport" width="100%;" scrolling="no" src="/shortcut/flex.html"></iframe>
+        <iframe id="viewport" width="100%;" scrolling="no"></iframe>
     </article>
     <nav>
         <ul id="menu"></ul>
@@ -97,26 +97,26 @@
   ], function() {
     $(document).ready(function() {
       var lists = [
-        '/base/align-items.html',
-        '/base/align-self.html',
-        '/base/flex-basis.html',
-        '/base/flex-direction.html',
-        '/base/flex-grow.html',
-        '/base/flex-shrink.html',
-        '/base/flex-wrap.html',
-        '/base/justify-content.html',
-        '/base/order.html',
-        '/shortcut/flex.html',
-        '/shortcut/flex2.html',
-        '/shortcut/flex3.html',
-        '/shortcut/flex4.html',
+        'base/align-items.html',
+        'base/align-self.html',
+        'base/flex-basis.html',
+        'base/flex-direction.html',
+        'base/flex-grow.html',
+        'base/flex-shrink.html',
+        'base/flex-wrap.html',
+        'base/justify-content.html',
+        'base/order.html',
+        'shortcut/flex.html',
+        'shortcut/flex2.html',
+        'shortcut/flex3.html',
+        'shortcut/flex4.html',
       ];
       var lis = lists.map(function(item) {
         var keyName = item.replace(/(.*\/|\.html)/g, '');
         return $('<li key="' + item + '" name="' + keyName + '">' + item.replace(/(.*\/|\.html)/g, '') + '</li>');
       });
       var name = location.hash.replace('#','');
-      name = name || 'flex';
+      name = name || 'shortcut/flex.html';
       $('#viewport').attr('src', name);
 
       resizeIframe(document.getElementById('viewport'));

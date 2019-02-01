@@ -1,7 +1,7 @@
 loadjs([
   'https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js',
-  '/assets/css/prettify.css',
-  '/assets/js/prettify.min.js',
+  '../assets/css/prettify.css',
+  '../assets/js/prettify.min.js',
 ], function() {
   $(document).ready(function() {
     var htmlCode = $('#html-source')[0].outerHTML;
