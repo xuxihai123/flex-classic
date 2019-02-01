@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圣杯布局</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 88px;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        #main {
+            display: flex;
+            min-height: 800px;
+            border: 1px solid;
+        }
+
+        #main > article {
+            flex: 1;
+            order: 2;
+            /*background-color: lightgrey;*/
+        }
+
+        #main > nav {
+            width: 200px;
+            order: 1;
+        }
+
+        #main > aside {
+            width: 200px;
+            order: 3;
+            background-color: bisque;
+        }
+
+        @media all and (max-width: 600px) {
+            /* 要放三个栏位太窄了 */
+            #main {
+                flex-flow: column;
+            }
+
+            #main > article, #main > nav, #main > aside {
+                /* 回到文件顺序 */
+                order: 0;
+                width: auto;
+            }
+        }
+
+        #menu {
+            float: left;
+        }
+
+        #menu li {
+            line-height: 32px;
+            height: 32px;
+            padding: 5px 10px;
+            cursor: pointer;
+            width: 100%;
+            display: inline-block;
+        }
+
+        #menu li:hover, #menu li.active {
+            background-color: #1b58b8;
+        }
+
+        footer {
+            text-align: center;
+            height: 80px;
+        }
+        #viewport{
+            min-height: 800px;
+            padding: 10px 20px 20px 20px;
+        }
+    </style>
+</head>
+<body>
+<header>flex-examples</header>
+<div id="main">
+    <article>
+        <iframe id="viewport" width="100%;" scrolling="no" src="/shortcut/flex.html"></iframe>
+    </article>
+    <nav>
+        <ul id="menu"></ul>
+    </nav>
+</div>
+<footer>footer</footer>
+
+<script src="https://cdn.bootcss.com/loadjs/3.5.5/loadjs.js"></script>
+<script>
+  loadjs([
+    'https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js',
+  ], function() {
+    $(document).ready(function() {
+      var lists = [
+        '/base/align-items.html',
+        '/base/align-self.html',
+        '/base/flex-basis.html',
+        '/base/flex-direction.html',
+        '/base/flex-grow.html',
+        '/base/flex-shrink.html',
+        '/base/flex-wrap.html',
+        '/base/justify-content.html',
+        '/base/order.html',
+        '/shortcut/flex.html',
+        '/shortcut/flex2.html',
+        '/shortcut/flex3.html',
+        '/shortcut/flex4.html',
+      ];
+      var lis = lists.map(function(item) {
+        var keyName = item.replace(/(.*\/|\.html)/g, '');
+        return $('<li key="' + item + '" name="' + keyName + '">' + item.replace(/(.*\/|\.html)/g, '') + '</li>');
+      });
+      var name = location.hash.replace('#','');
+      name = name || 'flex';
+      $('#viewport').attr('src', name);
+
+      resizeIframe(document.getElementById('viewport'));
+
+      $('#menu').append(lis);
+      $('#menu').delegate('li', 'click', function() {
+        $('li').removeClass('active');
+        $(this).addClass('active');
+        $('#viewport').attr('src', $(this).attr('key'));
+        location.hash = '#' + $(this).attr('key');
+        resizeIframe(document.getElementById('viewport'));
+      });
+      $('#menu').find('[key=\'' + name + '\']').addClass('active');
+
+      function resizeIframe(iframe) {
+        setTimeout(function() {
+          iframe.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+        }, 300);
+      }
+    });
+  });
+
+</script>
+
+</body>
+</html>
