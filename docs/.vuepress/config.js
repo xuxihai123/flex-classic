@@ -1,5 +1,7 @@
 module.exports = {
+  base:'/flex-classic/',
   dest: './dist',
+  repo: 'https://github.com/xuxihai123/flex-classic',
   title: 'flex个人手册',
   description: 'Just playing around',
   themeConfig: {
