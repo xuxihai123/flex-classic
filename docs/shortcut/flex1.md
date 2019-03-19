@@ -1,39 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>flex</title>
-    <link rel="stylesheet" href="../style.css"/>
-    <style type="text/css" id="css-source">
-        .parent {
-            display: flex;
-            width: 600px;
-        }
+### flex-demo1
 
-        .parent > div {
-            height: 100px;
-        }
+<shortcut-flex1 />
 
-        .item-1 {
-            width: 140px;
-            flex: 2 1 10%;
-            background: blue;
-        }
+```html
+ <div class="parent" id="html-source">
+    <div class="item-1"></div>
+    <div class="item-2"></div>
+    <div class="item-3"></div>
+</div>
+```
 
-        .item-2 {
-            width: 100px;
-            flex: 2 500 auto;
-            background: darkblue;
-        }
+```css
+.parent {
+    display: flex;
+    width: 600px;
+}
 
-        .item-3 {
-            flex: 1 1 200px;
-            background: lightblue;
-        }
-    </style>
-</head>
-<body>
-<pre class="tip">
+.parent > div {
+    height: 100px;
+}
+
+.item-1 {
+    width: 140px;
+    flex: 2 1 10%;
+    background: blue;
+}
+
+.item-2 {
+    width: 100px;
+    flex: 2 500 auto;
+    background: darkblue;
+}
+
+.item-3 {
+    flex: 1 1 200px;
+    background: lightblue;
+}
+```
+
+### 解释
+
+```html
     flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。
 
     <span class="red">剩余空间为正值,宽度只与flex-grow有关</span>
@@ -63,15 +70,4 @@
 
     当 item-1 基准值取 0% 的时候，是把该项目视为零尺寸的，故即便声明其尺寸为 140px，也并没有什么用，形同虚设
     而 item-2 基准值取 auto 的时候，根据规则基准值使用值是主尺寸值即 100px，故这 100px 不会纳入剩余空间
-</pre>
-<div class="parent" id="html-source">
-    <div class="item-1"></div>
-    <div class="item-2"></div>
-    <div class="item-3"></div>
-</div>
-
-
-<script src="https://cdn.bootcss.com/loadjs/3.5.5/loadjs.js"></script>
-<script src="../main.js"></script>
-</body>
-</html>
+```
