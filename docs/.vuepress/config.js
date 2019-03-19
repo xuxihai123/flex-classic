@@ -1,4 +1,5 @@
 module.exports = {
+  dest: './dist',
   title: 'flex个人手册',
   description: 'Just playing around',
   themeConfig: {
