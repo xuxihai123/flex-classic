@@ -18,17 +18,16 @@
 
 .parent > div {
     height: 100px;
+    width: 300px;
 }
 
 .item-1 {
-    width: 140px;
-    flex: 2 1 10%;
+    flex: 2 1 0%;
     background: blue;
 }
 
 .item-2 {
-    width: 100px;
-    flex: 2 500 auto;
+    flex: 2 1 auto;
     background: darkblue;
 }
 

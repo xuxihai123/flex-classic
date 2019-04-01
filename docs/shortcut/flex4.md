@@ -21,19 +21,17 @@
 }
 
 .item-1 {
-    width: 140px;
-    flex: 2 1 10%;
+    flex: 1 1 200px;
     background: blue;
 }
 
 .item-2 {
-    width: 100px;
-    flex: 2 500 auto;
+    flex: 500 2 200px;
     background: darkblue;
 }
 
 .item-3 {
-    flex: 1 1 200px;
+    flex: 1 2 400px;
     background: lightblue;
 }
 ```
