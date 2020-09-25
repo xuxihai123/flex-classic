@@ -8,7 +8,7 @@
     column-reverse：主轴为垂直方向，起点在下沿。
 ```
 
-<base-flex-direction />
+<container-flex-direction />
 
 ```html
     <div class="box1">
@@ -38,30 +38,39 @@
 ```
 
 ```css
-  .box1, .box2, .box3, .box4 {
-      margin: 20px auto;
-      width: 160px;
-      height: 160px;
-      border: 1px solid;
-  }
+    .item{
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 12px;
+        background-color: rgb(224,108,28);
+    }
+    .box1, .box2, .box3, .box4 {
+        margin: 20px auto;
+        width: 160px;
+        height: 160px;
+        border: 1px solid;
+    }
 
-  .box1 {
-      display: flex;
-      flex-direction: row;
-  }
+    .box1 {
+        display: flex;
+        flex-direction: row;
+    }
 
-  .box2 {
-      display: flex;
-      flex-direction: row-reverse;
-  }
+    .box2 {
+        display: flex;
+        flex-direction: row-reverse;
+    }
 
-  .box3 {
-      display: flex;
-      flex-direction: column;
-  }
+    .box3 {
+        display: flex;
+        flex-direction: column;
+    }
 
-  .box4 {
-      display: flex;
-      flex-direction: column-reverse;
-  }
+    .box4 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 ```

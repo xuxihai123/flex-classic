@@ -6,7 +6,7 @@
     它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。
 ```
 
-<base-flex-basis />
+<element-flex-basis />
 
 ```html
    <div class="box1">

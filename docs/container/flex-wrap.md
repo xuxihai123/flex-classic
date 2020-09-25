@@ -5,7 +5,7 @@
 （3）wrap-reverse：换行，第一行在下方。
 ```
 
-<base-flex-wrap />
+<container-flex-wrap />
 
 ```html
 <div class="box1">
@@ -38,6 +38,15 @@
 ```
 
 ```css
+.item{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    background-color: rgb(224,108,28);
+}
 .box1,.box2,.box3,.box4,.box5,.box6{
     margin: 20px auto;
     width: 100px;

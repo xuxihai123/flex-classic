@@ -7,7 +7,7 @@ flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余�
 如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
 ```
 
-<base-flex-direction />
+<element-flex-grow />
 
 ```html
 <div class="box1">
@@ -22,12 +22,20 @@ flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余�
 </div>
 <div class="box1">
     <div class="item" style="flex-grow:1;">1</div>
-    <div class="item" style="flex-grow:2;">4</div>
-    <div class="item" style="flex-grow:3;">1</div>
+    <div class="item" style="flex-grow:2;">2</div>
+    <div class="item" style="flex-grow:3;">3</div>
 </div>
 ```
 
 ```css
+.item {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px;
+  background-color: rgb(224, 108, 28);
+}
 .box1{
     margin: 20px auto;
     width: 160px;

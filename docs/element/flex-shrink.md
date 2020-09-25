@@ -6,7 +6,7 @@
 如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。负值对该属性无效。
 ```
 
-<base-flex-direction />
+<element-flex-shrink />
 
 ```html
 <div class="box1">
@@ -27,6 +27,14 @@
 ```
 
 ```css
+.item {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px;
+  background-color: rgb(224, 108, 28);
+}
 .box1{
     margin: 20px auto;
     width: 160px;

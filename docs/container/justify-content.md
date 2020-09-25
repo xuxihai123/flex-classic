@@ -10,7 +10,7 @@ space-between：两端对齐，项目之间的间隔都相等。
 space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
 ```
 
-<base-flex-direction />
+<container-justify-content />
 
 ```html
 <div class="box1">
@@ -46,6 +46,15 @@ space-around：每个项目两侧的间隔相等。所以，项目之间的间�
 ```
 
 ```css
+.item{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    background-color: rgb(224,108,28);
+}
 .box1,.box2,.box3,.box4,.box5{
     margin: 20px auto;
     width: 160px;

@@ -12,7 +12,7 @@ stretch（默认值）：如果项目未设置高度或设为auto，将占满整
 
 # example 
 
-<base-align-items/>
+<container-align-items/>
 
 ```html
  <div class="doc-box">

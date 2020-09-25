@@ -6,7 +6,7 @@
 
 # example 
 
-<base-align-self/>
+<element-align-self/>
 
 ```html
    <div class="box1">
